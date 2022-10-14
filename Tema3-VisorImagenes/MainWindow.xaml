@@ -6,35 +6,56 @@
         xmlns:local="clr-namespace:Tema3_VisorImagenes"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" MinHeight="500" MinWidth="670">
+    <Window.Resources>
+        <Style TargetType="{x:Type DockPanel}">
+            <Setter Property="Margin" Value="8"/>
+        </Style>
+        <Style TargetType="{x:Type DockPanel}" x:Key="Interior">
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Rubik"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="4"/>
+        </Style>
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Source" Value="/assets/episodioIV.jpg"/>
+        </Style>
+    </Window.Resources>
     <DockPanel>
-        <DockPanel DockPanel.Dock="Bottom" Height="70" Margin="8" Background="#FF6CC9DE" LastChildFill="False">
-            <TextBlock DockPanel.Dock="Left" FontSize="20" FontFamily="Rubik" VerticalAlignment="Center">Nº Imágenes : 10</TextBlock>
-            <TextBlock DockPanel.Dock="Right" FontSize="20" FontFamily="Rubik" VerticalAlignment="Center">Diseñado por Javier Catalá</TextBlock>
+        <DockPanel DockPanel.Dock="Bottom" Height="70" Background="#FF6CC9DE" LastChildFill="False">
+            <TextBlock DockPanel.Dock="Left">Nº Imágenes : 10</TextBlock>
+            <TextBlock DockPanel.Dock="Right">Diseñado por Javier Catalá</TextBlock>
         </DockPanel>
-        <DockPanel DockPanel.Dock="Right" Width="118" Margin="8" Background="#FF70C95C">
+        <DockPanel DockPanel.Dock="Right" Width="118" Background="#FF70C95C">
             <Border BorderBrush="Black" BorderThickness="2" CornerRadius="5">
-                <DockPanel LastChildFill="False">
-                    <Button Margin="4" DockPanel.Dock="Top">Añadir Imagen</Button>
-                    <Button Margin="4" DockPanel.Dock="Top">Eliminar Imagen</Button>
-                    <Button Margin="4" DockPanel.Dock="Top">Eliminar todas</Button>
-                    <Button Margin="4" DockPanel.Dock="Bottom">Rotar</Button>
-                    <Button Margin="4" DockPanel.Dock="Bottom">Recortar</Button>
+                <DockPanel Style="{StaticResource Interior}" LastChildFill="False">
+                    <Button DockPanel.Dock="Top">Añadir Imagen</Button>
+                    <Button DockPanel.Dock="Top">Eliminar Imagen</Button>
+                    <Button DockPanel.Dock="Top">Eliminar todas</Button>
+                    <Button DockPanel.Dock="Bottom">Rotar</Button>
+                    <Button DockPanel.Dock="Bottom">Recortar</Button>
                 </DockPanel>
             </Border>
         </DockPanel>
         <StackPanel>
             <Label HorizontalAlignment="Center" FontSize="40" FontFamily="Rubik">Visor de Imágenes</Label>
             <WrapPanel>
-                <Image Source="/assets/episodioIV.jpg" Width="100" Height="150"></Image>
-                <Image Source="/assets/episodioIV.jpg" Width="100" Height="150"></Image>
-                <Image Source="/assets/episodioIV.jpg" Width="100" Height="150"></Image>
-                <Image Source="/assets/episodioIV.jpg" Width="100" Height="150"></Image>
-                <Image Source="/assets/episodioIV.jpg" Width="100" Height="150"></Image>
-                <Image Source="/assets/episodioIV.jpg" Width="100" Height="150"></Image>
-                <Image Source="/assets/episodioIV.jpg" Width="100" Height="150"></Image>
-                <Image Source="/assets/episodioIV.jpg" Width="100" Height="150"></Image>
-                <Image Source="/assets/episodioIV.jpg" Width="100" Height="150"></Image>
-                <Image Source="/assets/episodioIV.jpg" Width="100" Height="150"></Image>
+                <Image></Image>
+                <Image></Image>
+                <Image></Image>
+                <Image></Image>
+                <Image></Image>
+                <Image></Image>
+                <Image></Image>
+                <Image></Image>
+                <Image></Image>
+                <Image></Image>
             </WrapPanel>
         </StackPanel>
     </DockPanel>
